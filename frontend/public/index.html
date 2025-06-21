@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#128C7E" />
+  <meta name="description" content="WhatsApp Bot Mobile Application" />
+
+  <!-- Отключаем запрос favicon -->
+  <link rel="icon" href="data:,">
+
+  <!-- PWA Configuration (без manifest) -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <title>WhatsApp Рассыльщик</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+    #root {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Стиль для fallback иконки */
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      background-color: #128C7E;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    <div style="padding: 20px; text-align: center;">
+      <h2>Для работы приложения требуется JavaScript</h2>
+      <p>Пожалуйста, включите JavaScript в настройках вашего браузера</p>
+    </div>
+  </noscript>
+  <div id="root"></div>
+
+  <!-- Mobile viewport fix -->
+  <script>
+    (function() {
+      function setViewportScale() {
+        var viewport = document.querySelector('meta[name="viewport"]');
+        if (window.visualViewport && window.visualViewport.width < 500) {
+          viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        } else {
+          viewport.content = 'width=device-width, initial-scale=1.0';
+        }
+      }
+      window.addEventListener('resize', setViewportScale);
+      setViewportScale();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+2025/06/21-17:26:48.802 5bc0 Reusing MANIFEST C:\Users\jkj\PycharmProjects\PythonProject\whatsapp-distributor\node-bot\wwebjs_auth\session-main-session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/21-17:26:48.802 5bc0 Recovering log #95
+2025/06/21-17:26:48.906 5bc0 Reusing old log C:\Users\jkj\PycharmProjects\PythonProject\whatsapp-distributor\node-bot\wwebjs_auth\session-main-session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000095.log 
+2025/06/21-17:26:51.098 55b4 Manual compaction at level-0 from '\x00\x1d\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1e\x00\x00\x00' @ 0 : 0; will stop at (end)
